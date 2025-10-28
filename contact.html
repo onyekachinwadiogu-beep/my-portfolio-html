@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Contact — Kachi</title><link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+<nav><div class="container"><strong>Kachi Nwadiogu</strong>
+<div><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a><a href="chatbot.html">Chatbot</a></div>
+</div></nav>
+<main class="container">
+  <h1>Contact</h1>
+  <div class="card">
+    <form id="contactForm">
+      <label>Name<br><input class="input" name="name" required></label><br><br>
+      <label>Email<br><input class="input" type="email" name="email" required></label><br><br>
+      <label>Message<br><textarea class="input" rows="6" name="message" required></textarea></label><br><br>
+      <button class="btn">Send</button>
+    </form>
+  </div>
+</main>
+<footer><footer>
+  <div class="container">
+    © <span id="y"></span> Kachi — Built with
+    <a href="https://expressjs.com" target="_blank" rel="noreferrer">Express (JS Framework)</a>
+    + OpenAI
+  </div>
+</footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const f=e.target;
+  const subj=encodeURIComponent(`Portfolio message from ${f.name.value}`);
+  const body=encodeURIComponent(`Email: ${f.email.value}\n\n${f.message.value}`);
+  window.location.href=`mailto:you@example.com?subject=${subj}&body=${body}`;
+});
+
+</script>
+</body></html>

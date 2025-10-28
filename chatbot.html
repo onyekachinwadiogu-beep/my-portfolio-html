@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chatbot — Kachi</title><link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+<nav><div class="container"><strong>Kachi Nwadiogu</strong>
+<div><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="active" href="chatbot.html">Chatbot</a></div>
+</div></nav>
+<main class="container">
+  <h1>AI Chatbot</h1>
+  <p class="card">
+  This chatbot uses a Node/Express server to call OpenAI’s Chat Completions API
+  (model: <code>gpt-4o-mini</code>). If no API key is set, it returns a mock reply for demo.
+</p>
+
+  <div class="chatbox" id="chatbox">
+    <div class="msg bot">Hi! Ask me about Kachi or his projects.</div>
+  </div>
+  <div class="row" style="margin-top:8px">
+    <input id="msg" class="input" placeholder="Type a message and press Enter…" />
+    <button class="btn" id="send">Send</button>
+  </div>
+  <small class="muted">Note: uses a simple server endpoint at <code>/api/chat</code>.</small>
+</main>
+<footer>
+  <div class="container">
+    © <span id="y"></span> Kachi — Built with
+    <a href="https://expressjs.com" target="_blank" rel="noreferrer">Express (JS Framework)</a>
+    + OpenAI
+  </div>
+</footer>
+<script src="assets/chatbot.js"></script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
