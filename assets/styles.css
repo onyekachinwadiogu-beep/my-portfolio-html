@@ -17,3 +17,16 @@ footer .container{padding:16px;color:var(--muted);font-size:14px}
 .msg.user{background:var(--brand);color:#fff}
 .msg.bot{background:#f1f5f9;color:var(--fg)}
 .row{display:flex;gap:8px}
+#contact {
+  margin-top: 40px;
+}
+
+.contact-links a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
